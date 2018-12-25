@@ -4,10 +4,14 @@
       <ul>
         <% task.errors.full_messages.each do |task| %>
           <li><%= task %></li>
+          
         <% end %>
       </ul>
     </div>
   <% end %>
+
+  <%= f.label :status, 'ステータス' %>
+  <%= f.text_field :status %>
 
   <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
